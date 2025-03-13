@@ -1,0 +1,149 @@
+{
+  "会计师": {
+    "description": "会计师负责记录和分析财务交易，准备财务报表，确保财务记录的准确性。",
+    "skills": ["会计", "法律", "图书馆使用", "说服", "心理学", "侦查", "外语", "信用评级"],
+    "credit_rating_min": 30,
+    "credit_rating_max": 70,
+    "skill_points_formula": "EDU*4"
+  },
+  "演员": {
+    "description": "演员通过表演艺术娱乐观众，可能在舞台、电影或电视上工作。",
+    "skills": ["艺术/手艺", "乔装", "历史", "魅惑", "心理学", "话术", "格斗", "信用评级"],
+    "credit_rating_min": 9,
+    "credit_rating_max": 70,
+    "skill_points_formula": "EDU*2+APP*2"
+  },
+  "动物训练师": {
+    "description": "动物训练师教导动物执行特定任务或表演，可能在马戏团、电影行业或私人领域工作。",
+    "skills": ["动物驯养", "跳跃", "聆听", "博物学", "心理学", "骑术", "侦查", "信用评级"],
+    "credit_rating_min": 10,
+    "credit_rating_max": 40,
+    "skill_points_formula": "EDU*2+APP*2"
+  },
+  "古董商": {
+    "description": "古董商买卖和评估古董和收藏品，对历史和艺术有深入了解。",
+    "skills": ["会计", "估价", "考古学", "历史", "图书馆使用", "外语", "说服", "信用评级"],
+    "credit_rating_min": 30,
+    "credit_rating_max": 70,
+    "skill_points_formula": "EDU*4"
+  },
+  "考古学家": {
+    "description": "考古学家研究人类历史和史前时期，通过挖掘和分析文物来了解过去的文化。",
+    "skills": ["考古学", "历史", "外语", "图书馆使用", "侦查", "机械维修", "导航", "信用评级"],
+    "credit_rating_min": 10,
+    "credit_rating_max": 40,
+    "skill_points_formula": "EDU*4"
+  },
+  "建筑师": {
+    "description": "建筑师设计建筑物和其他结构，确保它们既美观又实用。",
+    "skills": ["会计", "艺术/手艺", "历史", "图书馆使用", "说服", "心理学", "科学", "信用评级"],
+    "credit_rating_min": 30,
+    "credit_rating_max": 70,
+    "skill_points_formula": "EDU*4"
+  },
+  "艺术家": {
+    "description": "艺术家创作视觉艺术作品，如绘画、雕塑或摄影。",
+    "skills": ["艺术/手艺", "历史", "心理学", "侦查", "外语", "魅惑", "说服", "信用评级"],
+    "credit_rating_min": 9,
+    "credit_rating_max": 50,
+    "skill_points_formula": "EDU*2+DEX*2"
+  },
+  "运动员": {
+    "description": "运动员参与竞技体育活动，可能是职业选手或业余爱好者。",
+    "skills": ["攀爬", "跳跃", "格斗", "骑术", "游泳", "投掷", "闪避", "信用评级"],
+    "credit_rating_min": 9,
+    "credit_rating_max": 70,
+    "skill_points_formula": "EDU*2+DEX*2"
+  },
+  "作家": {
+    "description": "作家创作小说、非小说或其他文学作品，可能是自由职业者或受雇于出版社。",
+    "skills": ["艺术/手艺", "历史", "图书馆使用", "母语", "心理学", "外语", "侦查", "信用评级"],
+    "credit_rating_min": 9,
+    "credit_rating_max": 50,
+    "skill_points_formula": "EDU*4"
+  },
+  "酒保": {
+    "description": "酒保在酒吧或餐厅调制和供应饮料，同时与顾客互动。",
+    "skills": ["会计", "聆听", "心理学", "侦查", "话术", "格斗", "闪避", "信用评级"],
+    "credit_rating_min": 8,
+    "credit_rating_max": 25,
+    "skill_points_formula": "EDU*2+APP*2"
+  },
+  "猎人": {
+    "description": "猎人追踪和捕获野生动物，可能是为了食物、皮毛或作为向导。",
+    "skills": ["聆听", "博物学", "导航", "潜行", "生存", "追踪", "射击", "信用评级"],
+    "credit_rating_min": 20,
+    "credit_rating_max": 50,
+    "skill_points_formula": "EDU*2+DEX*2"
+  },
+  "律师": {
+    "description": "律师为客户提供法律建议和代表，可能专注于刑事、民事或公司法律。",
+    "skills": ["会计", "法律", "图书馆使用", "说服", "心理学", "侦查", "外语", "信用评级"],
+    "credit_rating_min": 30,
+    "credit_rating_max": 80,
+    "skill_points_formula": "EDU*4"
+  },
+  "图书管理员": {
+    "description": "图书管理员管理图书馆的藏书和资源，帮助访客找到信息。",
+    "skills": ["会计", "图书馆使用", "历史", "外语", "母语", "侦查", "神秘学", "信用评级"],
+    "credit_rating_min": 9,
+    "credit_rating_max": 35,
+    "skill_points_formula": "EDU*4"
+  },
+  "医生": {
+    "description": "医生诊断和治疗疾病和伤害，可能是全科医生或专科医生。",
+    "skills": ["急救", "医学", "心理学", "生物学", "化学", "外语", "拉丁语", "信用评级"],
+    "credit_rating_min": 30,
+    "credit_rating_max": 80,
+    "skill_points_formula": "EDU*4"
+  },
+  "音乐家": {
+    "description": "音乐家创作、演奏或录制音乐，可能是独奏者或乐队成员。",
+    "skills": ["艺术/手艺", "历史", "聆听", "心理学", "外语", "魅惑", "说服", "信用评级"],
+    "credit_rating_min": 9,
+    "credit_rating_max": 50,
+    "skill_points_formula": "EDU*2+DEX*2"
+  },
+  "护士": {
+    "description": "护士为患者提供医疗护理，协助医生进行治疗和手术。",
+    "skills": ["急救", "医学", "心理学", "聆听", "侦查", "说服", "外语", "信用评级"],
+    "credit_rating_min": 9,
+    "credit_rating_max": 30,
+    "skill_points_formula": "EDU*4"
+  },
+  "警察": {
+    "description": "警察维护法律和秩序，调查犯罪，保护公民安全。",
+    "skills": ["格斗", "急救", "法律", "聆听", "心理学", "侦查", "射击", "信用评级"],
+    "credit_rating_min": 9,
+    "credit_rating_max": 30,
+    "skill_points_formula": "EDU*2+DEX*2"
+  },
+  "私家侦探": {
+    "description": "私家侦探受雇调查各种事件，如失踪人口、不忠行为或保险欺诈。",
+    "skills": ["艺术/手艺", "乔装", "法律", "图书馆使用", "说服", "心理学", "侦查", "信用评级"],
+    "credit_rating_min": 20,
+    "credit_rating_max": 45,
+    "skill_points_formula": "EDU*2+STR*2"
+  },
+  "教授": {
+    "description": "教授在大学或学院教授特定学科，进行研究并发表学术论文。",
+    "skills": ["图书馆使用", "外语", "历史", "说服", "心理学", "侦查", "母语", "信用评级"],
+    "credit_rating_min": 20,
+    "credit_rating_max": 70,
+    "skill_points_formula": "EDU*4"
+  },
+  "记者": {
+    "description": "记者收集、撰写和报道新闻故事，可能专注于特定领域如政治或体育。",
+    "skills": ["艺术/手艺", "历史", "图书馆使用", "母语", "心理学", "外语", "侦查", "信用评级"],
+    "credit_rating_min": 9,
+    "credit_rating_max": 30,
+    "skill_points_formula": "EDU*4"
+  },
+  "科学家": {
+    "description": "科学家研究自然世界的各个方面，如物理、化学或生物学。",
+    "skills": ["科学", "图书馆使用", "外语", "侦查", "机械维修", "电子学", "计算机使用", "信用评级"],
+    "credit_rating_min": 9,
+    "credit_rating_max": 50,
+    "skill_points_formula": "EDU*4"
+  }
+} 
