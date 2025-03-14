@@ -8,7 +8,7 @@ from PyQt6.QtWidgets import (
     QTableWidget, QTableWidgetItem, QHeaderView, QScrollArea
 )
 from PyQt6.QtCore import Qt
-from PyQt6.QtGui import QFont, QPainter, QTextDocument
+from PyQt6.QtGui import QFont, QPainter, QTextDocument, QPageSize
 from PyQt6.QtPrintSupport import QPrinter
 
 class SummaryTab(QWidget):
@@ -380,7 +380,15 @@ class SummaryTab(QWidget):
         
         # 创建打印机
         printer = QPrinter(QPrinter.PrinterMode.HighResolution)
-        printer.setPageSize(QPrinter.PageSize.A4)
+        printer.setPageSize(QPageSize(QPageSize.PageSizeId.A4))
+        
+        # 显示打印对话框
+        from PyQt6.QtPrintSupport import QPrintDialog
+        print_dialog = QPrintDialog(printer, self)
+        print_dialog.setWindowTitle("打印角色卡")
+        
+        if print_dialog.exec() != QPrintDialog.DialogCode.Accepted:
+            return  # 用户取消了打印操作
         
         # 创建文档
         document = QTextDocument()
@@ -562,11 +570,14 @@ class SummaryTab(QWidget):
         </html>
         """
         
-        # 设置文档内容
+        # 设置HTML内容
         document.setHtml(html)
         
         # 打印文档
-        document.print_(printer)
+        document.print(printer)
+        
+        # 显示成功提示
+        self.parent.show_message("角色卡打印任务已发送到打印机！")
     
     def export_to_text(self):
         """导出为文本"""

@@ -97,7 +97,7 @@ class BackgroundTab(QWidget):
         
         # 连接信号和槽
         self.random_button.clicked.connect(self.generate_random_background)
-        self.save_button.clicked.connect(self.save_background)
+        self.save_button.clicked.connect(lambda: self.save_background(show_message=True))
         
         # 连接文本编辑器的文本变化信号
         self.personal_description.textChanged.connect(self.on_text_changed)
@@ -146,8 +146,12 @@ class BackgroundTab(QWidget):
         # 更新UI
         self.update_ui()
     
-    def save_background(self):
-        """保存背景信息"""
+    def save_background(self, show_message=False):
+        """保存背景信息
+        
+        Args:
+            show_message (bool): 是否显示保存成功的消息，默认为False
+        """
         if not self.parent.current_investigator:
             return
         
@@ -165,8 +169,9 @@ class BackgroundTab(QWidget):
         investigator.arcane_tomes_spells = self.arcane_tomes_spells.toPlainText()
         investigator.background_story = self.background_story.toPlainText()
         
-        # 显示保存成功消息
-        self.parent.show_message("背景信息已保存")
+        # 只有在指定时才显示保存成功消息
+        if show_message:
+            self.parent.show_message("背景信息已保存")
     
     def update_ui(self):
         """更新UI"""

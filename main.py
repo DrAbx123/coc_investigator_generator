@@ -39,15 +39,15 @@ def main():
     """主函数"""
     try:
         print("开始初始化应用程序...")
+        print(f"Python版本: {sys.version}")
+        print(f"当前工作目录: {os.getcwd()}")
         
         # 确保数据目录存在
         os.makedirs("data", exist_ok=True)
         
         # 创建应用程序
+        print("创建QApplication实例...")
         app = QApplication(sys.argv)
-        
-        # 显示一个消息框，确认程序已启动
-        QMessageBox.information(None, "程序启动", "克苏鲁调查员生成器正在启动...")
         
         # 加载配置
         print("加载配置...")
@@ -62,30 +62,36 @@ def main():
         occupations = Occupations()
         try:
             occupations.load_occupations("data/occupations.json")
+            print(f"成功加载了 {len(occupations.occupations)} 个职业")
         except Exception as e:
             print(f"加载职业数据失败: {e}")
             print("使用默认职业数据")
             occupations.occupations = occupations.get_all_occupations()
+            print(f"使用默认设置了 {len(occupations.occupations)} 个职业")
         
         # 加载技能数据
         print("加载技能数据...")
         skills = Skills()
         try:
             skills.load_skills("data/skills.json")
+            print(f"成功加载了 {len(skills.skills)} 个技能")
         except Exception as e:
             print(f"加载技能数据失败: {e}")
             print("使用默认技能数据")
             skills.skills = skills.get_all_skills()
+            print(f"使用默认设置了 {len(skills.skills)} 个技能")
         
         # 加载背景数据
         print("加载背景数据...")
         backgrounds = Backgrounds()
         try:
             backgrounds.load_backgrounds("data/backgrounds.json")
+            print(f"成功加载了 {len(backgrounds.backgrounds)} 个背景")
         except Exception as e:
             print(f"加载背景数据失败: {e}")
             print("使用默认背景数据")
             backgrounds.backgrounds = {}
+            print("没有设置默认背景数据")
         
         # 创建调查员生成器
         print("创建调查员生成器...")
@@ -105,10 +111,8 @@ def main():
             print("启动应用程序...")
             print("GUI应该现在显示。如果没有显示，请检查PyQt6安装是否正确。")
             
-            # 显示一个消息框，确认程序正在运行
-            QMessageBox.information(None, "程序启动", "克苏鲁调查员生成器已启动！")
-            
             # 运行应用程序
+            print("执行app.exec()...")
             return app.exec()
         except Exception as e:
             error_msg = f"创建主窗口失败: {e}"
@@ -123,4 +127,5 @@ def main():
         return 1
 
 if __name__ == "__main__":
+    print("程序开始执行...")
     sys.exit(main()) 

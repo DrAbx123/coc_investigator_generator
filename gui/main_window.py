@@ -142,18 +142,25 @@ class MainWindow(QMainWindow):
             self.show_message("没有调查员可保存")
             return
         
-        # 获取保存路径
-        file_path, _ = QFileDialog.getSaveFileName(
-            self, "保存调查员", "", "JSON文件 (*.json)"
-        )
+        # 在保存前先更新所有标签页的数据
+        self.update_investigator_from_tabs()
+        
+        # 获取保存路径，如果已有文件路径则使用
+        if hasattr(self.current_investigator, 'file_path') and self.current_investigator.file_path:
+            file_path = self.current_investigator.file_path
+        else:
+            file_path, _ = QFileDialog.getSaveFileName(
+                self, "保存调查员", "", "JSON文件 (*.json)"
+            )
         
         if not file_path:
             return
         
-        # 保存调查员
+        # 保存调查员，并记录文件路径
         success = self.file_handler.save_investigator(self.current_investigator, file_path)
         
         if success:
+            self.current_investigator.file_path = file_path
             self.show_message(f"调查员已保存到: {file_path}")
         else:
             self.show_message("保存调查员失败")
@@ -173,6 +180,8 @@ class MainWindow(QMainWindow):
         
         if investigator:
             self.current_investigator = investigator
+            # 保存文件路径到调查员对象
+            self.current_investigator.file_path = file_path
             self.update_all_tabs()
             self.tab_widget.setCurrentIndex(5)  # 切换到摘要标签页
             self.show_message(f"调查员已加载: {file_path}")
@@ -184,6 +193,9 @@ class MainWindow(QMainWindow):
         if not self.current_investigator:
             self.show_message("没有调查员可导出")
             return
+        
+        # 在导出前先更新所有标签页的数据
+        self.update_investigator_from_tabs()
         
         # 获取导出路径
         file_path, _ = QFileDialog.getSaveFileName(
@@ -208,9 +220,8 @@ class MainWindow(QMainWindow):
         if hasattr(current_tab, "update_ui"):
             current_tab.update_ui()
         
-        # 如果是从属性、职业或技能标签页切换到其他标签页，先更新调查员数据
-        if index > 2:
-            self.update_investigator_from_tabs()
+        # 保存调查员数据
+        self.update_investigator_from_tabs()
     
     def update_investigator_from_tabs(self):
         """从标签页更新调查员数据"""
@@ -231,7 +242,7 @@ class MainWindow(QMainWindow):
         
         # 更新背景标签页数据
         if hasattr(self.background_tab, "save_background"):
-            self.background_tab.save_background()
+            self.background_tab.save_background(show_message=False)
         
         # 更新装备标签页数据
         if hasattr(self.equipment_tab, "update_investigator"):
@@ -262,6 +273,42 @@ class MainWindow(QMainWindow):
         # 更新摘要标签页
         if hasattr(self.summary_tab, "update_ui"):
             self.summary_tab.update_ui()
+    
+    def closeEvent(self, event):
+        """窗口关闭事件处理"""
+        if self.current_investigator:
+            # 更新并保存当前调查员数据
+            self.update_investigator_from_tabs()
+            
+            # 如果文件名已经存在，直接保存
+            if hasattr(self.current_investigator, 'file_path') and self.current_investigator.file_path:
+                self.file_handler.save_investigator(self.current_investigator, self.current_investigator.file_path)
+            else:
+                # 询问用户是否保存
+                reply = QMessageBox.question(
+                    self, '保存调查员', 
+                    '是否在退出前保存当前调查员?',
+                    QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No | QMessageBox.StandardButton.Cancel
+                )
+                
+                if reply == QMessageBox.StandardButton.Yes:
+                    # 获取保存路径
+                    file_path, _ = QFileDialog.getSaveFileName(
+                        self, "保存调查员", "", "JSON文件 (*.json)"
+                    )
+                    
+                    if file_path:
+                        self.file_handler.save_investigator(self.current_investigator, file_path)
+                    else:
+                        # 用户取消保存，但允许关闭窗口
+                        pass
+                elif reply == QMessageBox.StandardButton.Cancel:
+                    # 用户不想关闭窗口
+                    event.ignore()
+                    return
+        
+        # 接受关闭事件
+        event.accept()
     
     def show_message(self, message):
         """显示消息"""

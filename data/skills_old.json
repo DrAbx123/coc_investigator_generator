@@ -1,0 +1,363 @@
+{
+  "会计": {
+    "base_value": 5,
+    "category": "知识",
+    "description": "处理财务记录，发现账目中的不规则之处。",
+    "difficulty_examples": {
+      "regular": "检查简单的账目，发现明显的异常。",
+      "hard": "发现精心隐藏的账目问题，或分析复杂的财务记录。",
+      "extreme": "识别极其隐蔽的财务欺诈，或重构被故意销毁的账目。"
+    },
+    "opposed_skills": ["会计"],
+    "push_examples": "花费更多时间重新检查账目；寻找其他证明文件；询问相关人员。",
+    "push_failure": "被淹没在数字和细节中；被误导得出错误结论；惹上法律麻烦。"
+  },
+  "人类学": {
+    "base_value": 1,
+    "category": "知识",
+    "description": "理解不同文化的习俗、信仰和社会结构。",
+    "difficulty_examples": {
+      "regular": "花费一个月时间或更多时间与人接触。",
+      "hard": "花费仅仅一周或更少时间与人接触。",
+      "extreme": "仅凭极少接触判断完全陌生的文化。"
+    },
+    "opposed_skills": ["人类学"],
+    "push_examples": "花费更多的时间来研究目标；去'当地'体验一段时间；在一场仪式或祭奠等活动上扮演积极角色。",
+    "push_failure": "得出完全错误的结论；冒犯当地文化习俗；引起敌对反应。"
+  },
+  "估价": {
+    "base_value": 5,
+    "category": "知识",
+    "description": "确定物品的价值和真伪。",
+    "difficulty_examples": {
+      "regular": "一件在制造年代并不稀有的物品，以及用常见材料制作（如50年的金手表）。",
+      "hard": "一件不寻常的物品，也许用非寻常材料制成（如几百年历史的外国制品，例如古代卷册）。",
+      "extreme": "极其珍稀或复杂的物品；完全陌生工艺的作品。"
+    },
+    "opposed_skills": ["估价", "艺术/手艺(伪造)"],
+    "push_examples": "与另一名专家一同确认物品的正确性；进行检验；对物品进行研究。",
+    "push_failure": "在研究中意外地毁坏了物品；使这件物品引起了别人的注意，导致这件物品被偷；激活了这件物品的功用。"
+  },
+  "考古学": {
+    "base_value": 1,
+    "category": "知识",
+    "description": "识别古代文物和文明，了解其历史背景。",
+    "difficulty_examples": {
+      "regular": "识别和了解常见的古代文物。",
+      "hard": "分析破损或部分毁坏的文物；确定年代或文化背景。",
+      "extreme": "重构几乎完全损毁的文物；解读前所未见的古代文字。"
+    },
+    "opposed_skills": ["考古学", "历史"],
+    "push_examples": "进行更详细的现场研究；翻查相关参考资料；咨询其他专家。",
+    "push_failure": "错误解读文物；在挖掘过程中损坏文物；得出错误的历史结论。"
+  },
+  "艺术/手艺": {
+    "base_value": 5,
+    "category": "技能",
+    "description": "创作或修复艺术品或手工制品。",
+    "specializations": ["表演", "美术", "伪造", "写作", "理发", "书法", "木匠", "厨艺", "舞蹈", "歌唱", "歌剧歌唱", "粉刷匠和油漆工", "摄影", "制陶", "雕塑", "吹真空管"],
+    "difficulty_examples": {
+      "regular": "制作一个标准而适于贩卖的物品。",
+      "hard": "制作一个更高质量或特别复杂的部件。",
+      "extreme": "创作大师级作品；修复几乎完全损坏的珍品；完美复制难以模仿的名作。"
+    },
+    "opposed_skills": ["艺术/手艺", "估价"],
+    "push_examples": "从头开始重做物品、部件或创作；进行进一步的研究调查；与另一位专家核对。",
+    "push_failure": "大量的时间与金钱被浪费了；制作出来的物品质量低劣，无法使用；工具或材料被浪费或损坏。"
+  },
+  "动物驯养": {
+    "base_value": 5,
+    "category": "技能",
+    "description": "训练和控制动物。",
+    "difficulty_examples": {
+      "regular": "命令经过训练的狗坐下，将东西拿过来或者攻击别人。",
+      "hard": "命令没有经过训练或者不熟悉的狗执行任务。",
+      "extreme": "在极端条件下控制野生动物；训练难以驯服的异种生物。"
+    },
+    "opposed_skills": [],
+    "push_examples": "采取更大个人风险的行为，特别是更加接近或者直接触摸动物。",
+    "push_failure": "动物攻击训练者或者附近的人，通常会造成伤害；动物逃跑了。"
+  },
+  "魅惑": {
+    "base_value": 15,
+    "category": "社交",
+    "description": "通过个人魅力影响他人，使其产生好感。",
+    "difficulty_examples": {
+      "regular": "说服已经对你有好感的人；在正常社交场合获取信息。",
+      "hard": "说服陌生人或警惕之人；获取敏感信息；讨价还价。",
+      "extreme": "说服严重敌对的人；获取高度机密信息。"
+    },
+    "opposed_skills": ["心理学"],
+    "push_examples": "明显赞美对方；赠送昂贵礼物；透露秘密建立信任。",
+    "push_failure": "被视为轻浮或不诚实；彻底惹恼对方；失去以后的影响机会。"
+  },
+  "攀爬": {
+    "base_value": 20,
+    "category": "身体",
+    "description": "攀登陡峭或垂直的表面。",
+    "difficulty_examples": {
+      "regular": "攀爬有明显抓握点的表面；使用适当设备的简单攀登。",
+      "hard": "攀爬陡峭或湿滑的表面；在恶劣天气条件下攀登。",
+      "extreme": "攀爬几乎光滑的表面；在极端条件下没有设备攀登。"
+    },
+    "push_examples": "尝试另一条攀登路线；使用额外设备；在危险条件下冒险前进。",
+    "push_failure": "摔落受伤；装备损坏；被困在攀爬途中无法上下。"
+  },
+  "计算机使用": {
+    "base_value": 5,
+    "category": "技能",
+    "description": "使用计算机进行编程、黑客攻击或信息检索。",
+    "modern_only": true,
+    "difficulty_examples": {
+      "regular": "编程、分析和调试计算机程序。",
+      "hard": "破解密码；入侵有保护的网络；重建已删除的数据。",
+      "extreme": "入侵高度安全的系统；编写极其复杂的程序；从严重损坏的媒介恢复数据。"
+    },
+    "opposed_skills": ["计算机使用"],
+    "push_examples": "花更多时间处理问题；尝试替代方案；使用专业工具。",
+    "push_failure": "系统崩溃；丢失重要数据；触发安全警报；留下可被追踪的痕迹。"
+  },
+  "信用评级": {
+    "base_value": 0,
+    "category": "特殊",
+    "description": "反映角色的财富和社会地位。",
+    "note": "这更像是评估富裕程度的指标，而非标准技能。不会获得成长标记，在游戏中可能随时间变化。"
+  },
+  "克苏鲁神话": {
+    "base_value": 0,
+    "category": "特殊",
+    "description": "了解宇宙中的恐怖存在和禁忌知识。",
+    "note": "无法在创建角色时加点，只能通过游戏过程中接触神话获得。每获得克苏鲁神话点数通常会失去等量的理智值上限。",
+    "difficulty_examples": {
+      "regular": "正确地根据第二手证据（足迹、创痕、第一手报告）来辨认出神话生物。",
+      "hard": "通过谣传、传说或极少的证据辨认出一个神话生物；辨认可能的弱点。",
+      "extreme": "完全理解神话生物的本质和能力；预测其行为和意图。"
+    },
+    "push_examples": "更加接近生物获得更好的观察；翻阅有着专业知识的可怕书卷或人类学问与传说；进行尸体解剖了解更多。",
+    "push_failure": "迄今为止都不知道的神话链接，并且你在那认识到的东西粉碎了你的思想（失去SAN）。"
+  },
+  "乔装": {
+    "base_value": 5,
+    "category": "技能",
+    "description": "改变外表以隐藏身份或模仿他人。",
+    "difficulty_examples": {
+      "regular": "进行简单的伪装；改变一些外表特征。",
+      "hard": "完全改变外表；模仿特定人物的外表。",
+      "extreme": "完美模仿他人，包括行为和声音；蒙骗亲密认识对方的人。"
+    },
+    "opposed_skills": ["侦查", "心理学"],
+    "push_examples": "经过一个完全拟真以及加强过的准备（将自己沉入到角色中去）；偷走个人物品并且将之利用进伪装中；用明显而夸张的手法来让对方困惑。",
+    "push_failure": "伪装明显失败；被识破身份；伪装材料导致严重过敏反应。"
+  },
+  "闪避": {
+    "base_value": 0,
+    "category": "身体",
+    "description": "躲避攻击或危险。",
+    "note": "初始值等于敏捷的一半。作为战斗技能，不存在孤注一掷。"
+  },
+  "汽车驾驶": {
+    "base_value": 20,
+    "category": "技能",
+    "description": "驾驶各种车辆，如汽车或轻型卡车。",
+    "difficulty_examples": {
+      "regular": "在正常条件下驾驶车辆；正常的交通。",
+      "hard": "在恶劣条件下驾驶；进行紧急机动；高速追逐。",
+      "extreme": "在极端危险条件下保持控制；执行近乎不可能的驾驶动作。"
+    },
+    "push_examples": "将车辆推至极限；执行危险的机动动作。",
+    "push_failure": "车辆失控；撞车；伤及乘客。"
+  },
+  "电气维修": {
+    "base_value": 10,
+    "category": "技能",
+    "description": "修理或改装电气设备。",
+    "difficulty_examples": {
+      "regular": "修理或者改装电气设备，例如自动点火装置，电动机，保险丝盒。",
+      "hard": "修理复杂或严重损坏的电气系统；在条件不佳的情况下工作。",
+      "extreme": "修复几乎完全损坏的系统；在没有适当工具的情况下工作。"
+    },
+    "push_examples": "冒险尝试不常规的维修方法；忽略安全规程。",
+    "push_failure": "导致电气短路；设备永久损坏；自身受到电击伤害。"
+  },
+  "电子学": {
+    "base_value": 1,
+    "category": "技能",
+    "description": "理解和操作复杂的电子设备。",
+    "modern_only": true,
+    "difficulty_examples": {
+      "regular": "使用和维护常见电子设备；进行简单修理。",
+      "hard": "修理复杂电子设备；在不利条件下工作。",
+      "extreme": "修理极其复杂或未知类型的电子设备。"
+    },
+    "push_examples": "不顾可能的风险强行修理；使用替代部件或临时解决方案。",
+    "push_failure": "永久损坏设备；造成危险的电气故障；引起火灾。"
+  },
+  "话术": {
+    "base_value": 5,
+    "category": "社交",
+    "description": "通过言语欺骗或误导他人。",
+    "difficulty_examples": {
+      "regular": "对普通人撒简单的谎；隐瞒基本信息。",
+      "hard": "对警惕或怀疑的人撒谎；编造复杂的谎言。",
+      "extreme": "对专家或极度警觉的人撒谎；在高压下维持复杂谎言。"
+    },
+    "opposed_skills": ["心理学", "话术"],
+    "push_examples": "与目标关系变得更加接近与私人；用富有异国风情的口味说话，为了让目标感到困惑。",
+    "push_failure": "谎言被明显识破；彻底失去目标信任；可能导致敌对反应。"
+  },
+  "格斗": {
+    "base_value": 25,
+    "category": "战斗",
+    "description": "使用近战武器或徒手进行战斗。"
+  },
+  "射击": {
+    "base_value": 20,
+    "category": "战斗",
+    "description": "使用枪械或其他远程武器。"
+  },
+  "急救": {
+    "base_value": 30,
+    "category": "技能",
+    "description": "提供基本医疗救助，稳定伤者状态。"
+  },
+  "历史": {
+    "base_value": 5,
+    "category": "知识",
+    "description": "了解历史事件、人物和时期。"
+  },
+  "恐吓": {
+    "base_value": 15,
+    "category": "社交",
+    "description": "通过威胁或暴力迫使他人服从。"
+  },
+  "跳跃": {
+    "base_value": 20,
+    "category": "身体",
+    "description": "跳过障碍物或跳到高处。"
+  },
+  "外语": {
+    "base_value": 1,
+    "category": "知识",
+    "description": "理解和使用非母语的语言。"
+  },
+  "母语": {
+    "base_value": 0,
+    "category": "知识",
+    "description": "熟练使用自己的母语。"
+  },
+  "法律": {
+    "base_value": 5,
+    "category": "知识",
+    "description": "了解法律体系和法规。"
+  },
+  "图书馆使用": {
+    "base_value": 20,
+    "category": "知识",
+    "description": "在图书馆或档案馆中查找信息。"
+  },
+  "聆听": {
+    "base_value": 20,
+    "category": "感知",
+    "description": "通过听觉获取信息。"
+  },
+  "锁匠": {
+    "base_value": 1,
+    "category": "技能",
+    "description": "开锁或制作钥匙。"
+  },
+  "机械维修": {
+    "base_value": 10,
+    "category": "技能",
+    "description": "修理或改装机械设备。"
+  },
+  "医学": {
+    "base_value": 1,
+    "category": "知识",
+    "description": "诊断和治疗疾病和伤害。"
+  },
+  "博物学": {
+    "base_value": 10,
+    "category": "知识",
+    "description": "识别和了解自然世界中的动植物。"
+  },
+  "导航": {
+    "base_value": 10,
+    "category": "技能",
+    "description": "确定位置和方向，规划路线。"
+  },
+  "神秘学": {
+    "base_value": 5,
+    "category": "知识",
+    "description": "了解超自然现象、宗教和神秘传统。"
+  },
+  "操作重型机械": {
+    "base_value": 1,
+    "category": "技能",
+    "description": "操作大型机械设备，如起重机或推土机。"
+  },
+  "说服": {
+    "base_value": 10,
+    "category": "社交",
+    "description": "通过逻辑和理性说服他人。"
+  },
+  "驾驶飞行器": {
+    "base_value": 1,
+    "category": "技能",
+    "description": "操作飞机或其他飞行器。"
+  },
+  "精神分析": {
+    "base_value": 1,
+    "category": "知识",
+    "description": "理解和治疗心理疾病，恢复理智值。"
+  },
+  "心理学": {
+    "base_value": 10,
+    "category": "知识",
+    "description": "理解人类行为和动机，识别谎言。"
+  },
+  "骑术": {
+    "base_value": 5,
+    "category": "技能",
+    "description": "骑乘和控制马匹或其他动物。"
+  },
+  "科学": {
+    "base_value": 1,
+    "category": "知识",
+    "description": "了解科学原理和方法。"
+  },
+  "妙手": {
+    "base_value": 10,
+    "category": "技能",
+    "description": "进行精细的手部操作，如偷窃或魔术。"
+  },
+  "追踪": {
+    "base_value": 10,
+    "category": "感知",
+    "description": "跟踪人或动物留下的痕迹。"
+  },
+  "投掷": {
+    "base_value": 20,
+    "category": "身体",
+    "description": "准确投掷物体。"
+  },
+  "游泳": {
+    "base_value": 20,
+    "category": "身体",
+    "description": "在水中移动和保持浮力。"
+  },
+  "生存": {
+    "base_value": 10,
+    "category": "技能",
+    "description": "在野外环境中生存和导航。"
+  },
+  "潜行": {
+    "base_value": 20,
+    "category": "身体",
+    "description": "隐藏自己或无声移动。"
+  },
+  "侦查": {
+    "base_value": 25,
+    "category": "感知",
+    "description": "注意到隐藏的物品或细节。"
+  }
+}
