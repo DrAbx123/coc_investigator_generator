@@ -1,5 +1,11 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+调查员生成器模块
+
+MIT License
+Copyright (c) 2025 COC Investigator Generator
+"""
 
 import random
 from utils.dice import DiceRoller

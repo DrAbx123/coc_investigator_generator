@@ -12,6 +12,9 @@
 - 装备系统
 - 角色状态跟踪
 
+MIT License
+Copyright (c) 2025 COC Investigator Generator
+
 属性计算规则：
 - 半值：属性值的一半（向下取整）
 - 五分之一值：属性值的五分之一（向下取整）

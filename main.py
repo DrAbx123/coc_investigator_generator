@@ -1,5 +1,13 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+COC 调查员生成器 - Call of Cthulhu 7th Edition Investigator Generator
+
+MIT License
+Copyright (c) 2025 COC Investigator Generator
+
+该项目采用MIT许可证开源，详见LICENSE文件
+"""
 
 import sys
 import os
